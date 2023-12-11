@@ -98,10 +98,10 @@
         }
 
         var cardTaxes = 2.75;
-        var profit = 1.3;
+        var govTaxes = 1.3;
         var dollarRate = 900;
 
-        var result = (amount * cardTaxes) * profit / dollarRate;
+        var result = (amount * cardTaxes) * govTaxes / dollarRate;
 
         document.getElementById('result').innerText = `Total to pay: $${result.toFixed(2)} -> This price includes all taxes from Argentina`;
     }
