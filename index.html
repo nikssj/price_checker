@@ -62,7 +62,7 @@
 <body>
 <div class="column" >
 <div id="calculator">
-    <h1>ARS PRODUCT PRICE CHECKER</h1>
+    <h1>ARS PRODUCT PRICE CHECKER by CRIOX SALES</h1>
     <label for="amount">ARS Amount:</label>
     <input type="number" id="amount" placeholder="Enter amount">
 
@@ -76,7 +76,7 @@
 <div id="instructions">
    
     <ol style="list-style-position: inside;">
-        <li>Look for any product on any Argentina Store such as: Spotify, Netflix, Disney, HBO, Steam, XBOX, Battle.net, Nintendo, etc</li>
+        <li>Look for any product on any Argentina Store such as: Spotify, Netflix, Disney+, HBO, Steam, XBOX, Battle.net, Nintendo, etc</li>
         <br>
         <li>Enter the price of the product you want to buy. You will get the final rate for it</li>
         <br>
@@ -103,7 +103,7 @@
 
         var result = (amount * cardTaxes) * profit / dollarRate;
 
-        document.getElementById('result').innerText = `Total to pay: $${result.toFixed(2)}`;
+        document.getElementById('result').innerText = `Total to pay: $${result.toFixed(2)} -> This price includes all taxes from Argentina`;
     }
 
 function redirectToContactUs() {
