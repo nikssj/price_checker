@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion Rate Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        #calculator {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #instructions {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="column" >
+<div id="calculator">
+    <h1>ARS PRODUCT PRICE CHECKER</h1>
+    <label for="amount">ARS Amount:</label>
+    <input type="number" id="amount" placeholder="Enter amount">
+
+    <button onclick="calculateConversion()">Calculate</button>
+
+    <div id="result"></div>
+</div>
+<br>
+<br>
+<br>
+<div id="instructions">
+   
+    <ol style="list-style-position: inside;">
+        <li>Look for any product on any Argentina Store such as: Spotify, Netflix, Disney, HBO, Steam, XBOX, Battle.net, Nintendo, etc</li>
+        <br>
+        <li>Enter the price of the product you want to buy. You will get the final rate for it</li>
+        <br>
+        <li>Pay for the rate</li>
+        <br>
+        <li>Get a one-time use debit card to spend on your desired product</li>
+        <br>
+        <li>Enjoy it</li>
+    </ol>
+</div>
+
+<script>
+    function calculateConversion() {
+        var amount = parseFloat(document.getElementById('amount').value);
+
+        if (isNaN(amount)) {
+            alert('Please enter a valid number');
+            return;
+        }
+
+        var cardTaxes = 2.75;
+        var profit = 1.3;
+        var dollarRate = 900;
+
+        var result = (amount * cardTaxes) * profit / dollarRate;
+
+        document.getElementById('result').innerText = `Total to pay: $${result.toFixed(2)}`;
+    }
+
+function redirectToContactUs() {
+                window.location.href = "https://t.me/criox_sales";
+            }
+</script>
+<br>
+<br>
+<button onclick="redirectToContactUs()" style="display: block; margin: 0 auto;">Contact Us</button>
+ </div>
+</body>
+</html>
